@@ -32,8 +32,8 @@ export function Locations() {
             {/* Foto */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
               <Image
-                src="/team-sar.png"
-                alt="Equipo de SAR Control de Plagas dando servicio en Querétaro"
+                src="/pest-control-2.jpg"
+                alt="Técnico de SAR Control de Plagas dando servicio en Querétaro"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width:1024px) 90vw, 45vw"
