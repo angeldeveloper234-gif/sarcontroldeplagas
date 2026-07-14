@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { AlertTriangle, Check, ArrowRight, Bug } from 'lucide-react'
 import { PageHero } from '@/components/layout/PageHero'
 import { QuoteCard } from '@/components/layout/QuoteCard'
+import { PestIcon } from '@/components/ui/pest-icons'
 import { FaqList } from '@/components/ui/FaqList'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { serviceSchema } from '@/lib/structured-data'
@@ -37,7 +38,7 @@ export default async function PlagaPage({ params }: Props) {
     <>
       <JsonLd data={serviceSchema({ name: `Control de ${p.name}`, description: p.description, path: `/plagas/${p.slug}` })} />
       <PageHero
-        eyebrow={`${p.emoji} ${p.name}`}
+        eyebrow={p.name}
         title={p.h1}
         subtitle={p.intro[0]}
         crumbs={[{ name: 'Plagas', path: '/plagas' }, { name: p.name, path: `/plagas/${p.slug}` }]}
@@ -105,7 +106,7 @@ export default async function PlagaPage({ params }: Props) {
             {PESTS.filter((x) => x.slug !== p.slug).map((x) => (
               <Link key={x.slug} href={`/plagas/${x.slug}`}
                 className="group inline-flex items-center gap-2 bg-white border border-border rounded-full px-4 py-2.5 text-[0.85rem] font-semibold text-navy hover:border-brand hover:text-brand-dk transition-colors">
-                <span>{x.emoji}</span> {x.name}
+                <PestIcon slug={x.slug} className="size-4 text-brand-dk" /> {x.name}
                 <ArrowRight className="size-3.5 opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all" />
               </Link>
             ))}

@@ -2,16 +2,17 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Menu, X, Phone, MapPin } from 'lucide-react'
+import { ChevronDown, Menu, X, Phone, MapPin, Search } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { SITE } from '@/lib/site'
 import { SarLogo } from './SarLogo'
 
 import { PESTS as PESTS_DATA } from '@/lib/pests-data'
+import { PestIcon } from '@/components/ui/pest-icons'
 
 const PESTS = [
-  { label: 'Todas las plagas', emoji: '🔎', href: '/plagas' },
-  ...PESTS_DATA.map((p) => ({ emoji: p.emoji, label: p.name, href: `/plagas/${p.slug}` })),
+  { slug: '', label: 'Todas las plagas', href: '/plagas' },
+  ...PESTS_DATA.map((p) => ({ slug: p.slug, label: p.name, href: `/plagas/${p.slug}` })),
 ]
 
 const SERVICES = [
@@ -95,7 +96,11 @@ export function Header() {
                     className="absolute left-0 mt-2 w-56 bg-white border border-border shadow-xl rounded-xl py-2 flex flex-col">
                     {PESTS.map((p) => (
                       <Link key={p.label} href={p.href} onClick={() => setDropdown(null)} className="group flex items-center gap-3 px-4 py-2 hover:bg-off transition-colors">
-                        <span className="text-lg">{p.emoji}</span>
+                        {p.slug ? (
+                          <PestIcon slug={p.slug} className="size-4.5 text-navy/70 group-hover:text-brand transition-colors" />
+                        ) : (
+                          <Search className="size-4.5 text-navy/70 group-hover:text-brand transition-colors" />
+                        )}
                         <span className="text-[0.82rem] font-semibold text-navy group-hover:text-brand transition-colors">{p.label}</span>
                       </Link>
                     ))}
@@ -145,8 +150,9 @@ export function Header() {
                       <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}
                         className="overflow-hidden pl-3 flex flex-col gap-1 border-l-2 border-brand-lt">
                         {group.items.map((it) => (
-                          <Link key={it.label} href={it.href} onClick={() => setMobileOpen(false)} className="py-2 text-[0.85rem] font-semibold text-navy hover:text-brand">
-                            {'emoji' in it ? `${it.emoji}  ` : ''}{it.label}
+                          <Link key={it.label} href={it.href} onClick={() => setMobileOpen(false)} className="inline-flex items-center gap-2.5 py-2 text-[0.85rem] font-semibold text-navy hover:text-brand">
+                            {'slug' in it && it.slug ? <PestIcon slug={it.slug} className="size-4 text-brand-dk" /> : null}
+                            {it.label}
                           </Link>
                         ))}
                       </motion.div>

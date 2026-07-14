@@ -4,6 +4,7 @@ import { Services } from '@/components/sections/Services'
 import { PestGrid } from '@/components/sections/PestGrid'
 import { Process } from '@/components/sections/Process'
 import { About } from '@/components/sections/About'
+import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import { GoogleReviews } from '@/components/sections/GoogleReviews'
 import { Faq } from '@/components/sections/Faq'
 import { BlogTeaser } from '@/components/sections/BlogTeaser'
@@ -19,6 +20,7 @@ export default function Home() {
       <PestGrid />
       <Process />
       <About />
+      <WhyChooseUs />
       <GoogleReviews />
       <Faq />
       <BlogTeaser />

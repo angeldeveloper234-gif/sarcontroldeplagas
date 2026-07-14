@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { FadeUp } from '@/components/animations/FadeUp'
+import { PestIcon } from '@/components/ui/pest-icons'
 import { PESTS } from '@/lib/pests-data'
 
 export function PestGrid() {
@@ -25,7 +26,9 @@ export function PestGrid() {
             <FadeUp key={p.slug} delay={(i % 4) * 0.06}>
               <Link href={`/plagas/${p.slug}`}
                 className="group flex flex-col text-left w-full h-full bg-white border border-border rounded-2xl p-5 transition-all hover:-translate-y-1 hover:shadow-xl hover:border-brand hover:bg-brand-lt/40">
-                <span className="text-4xl block">{p.emoji}</span>
+                <span className="size-14 rounded-xl bg-navy group-hover:bg-brand transition-colors flex items-center justify-center">
+                  <PestIcon slug={p.slug} className="size-8 text-white" />
+                </span>
                 <h3 className="mt-3 text-[1.05rem] text-navy group-hover:text-brand-dk transition-colors">{p.name}</h3>
                 <p className="mt-1.5 text-muted-foreground text-[0.8rem] leading-relaxed line-clamp-3 flex-grow">{p.description}</p>
                 <span className="mt-3 inline-flex items-center gap-1 text-[0.72rem] font-bold uppercase tracking-wide text-brand-dk opacity-0 group-hover:opacity-100 transition-opacity">

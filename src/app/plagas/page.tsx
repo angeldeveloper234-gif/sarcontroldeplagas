@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { PageHero } from '@/components/layout/PageHero'
 import { CtaBanner } from '@/components/sections/CtaBanner'
+import { PestIcon } from '@/components/ui/pest-icons'
 import { PESTS } from '@/lib/pests-data'
 
 export const metadata: Metadata = {
@@ -28,7 +29,9 @@ export default function PlagasPage() {
           {PESTS.map((p) => (
             <Link key={p.slug} href={`/plagas/${p.slug}`}
               className="group bg-white border border-border rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl hover:border-brand/50">
-              <span className="text-4xl block">{p.emoji}</span>
+              <span className="size-14 rounded-xl bg-navy group-hover:bg-brand transition-colors flex items-center justify-center">
+                <PestIcon slug={p.slug} className="size-8 text-white" />
+              </span>
               <h2 className="mt-3 text-[1.1rem] text-navy group-hover:text-brand-dk transition-colors">{p.name}</h2>
               <p className="mt-2 text-muted-foreground text-[0.82rem] leading-relaxed line-clamp-3">{p.intro[0]}</p>
               <span className="mt-4 inline-flex items-center gap-1.5 text-brand-dk font-bold text-[0.75rem] uppercase tracking-wide">

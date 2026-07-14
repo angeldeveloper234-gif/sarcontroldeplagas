@@ -97,6 +97,12 @@ export function Footer() {
           <nav className="flex flex-wrap gap-x-5 gap-y-1 justify-center">
             {NAV.map((n) => <Link key={n.label} href={n.href} className="hover:text-brand transition-colors">{n.label}</Link>)}
           </nav>
+          <span>
+            Hecho por{' '}
+            <a href="https://www.angelstudio.design/" target="_blank" rel="noopener noreferrer" className="font-semibold text-white/85 hover:text-brand transition-colors">
+              Angel Design Studio
+            </a>
+          </span>
         </div>
       </div>
     </footer>
