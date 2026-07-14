@@ -40,14 +40,14 @@ export function CtaBanner() {
         </div>
 
         {/* Técnico fumigador (torso hacia arriba) — anclado al borde inferior del banner */}
-        <div className="hidden lg:flex items-end justify-center relative w-[19rem] xl:w-[22rem]">
+        <div className="hidden lg:flex items-end justify-center relative w-[22rem] xl:w-[25rem]">
           <Image
             src="/person-fumigation.png"
             alt="Técnico de SAR Control de Plagas con equipo de protección mostrando aprobación"
             width={481}
             height={549}
             className="relative z-10 w-full h-auto object-contain object-bottom -mb-px drop-shadow-[0_16px_30px_rgba(16,30,82,0.4)]"
-            sizes="(min-width:1280px) 22rem, 19rem"
+            sizes="(min-width:1280px) 25rem, 22rem"
           />
         </div>
       </div>

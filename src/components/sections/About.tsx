@@ -28,7 +28,7 @@ export function About() {
         <FadeUp>
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
-              <Image src="/images/about-image1.jpg" alt="Técnico de SAR Control de Plagas realizando un servicio" fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" />
+              <Image src="/team-sar.png" alt="Equipo de técnicos certificados de SAR Control de Plagas en Querétaro" fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" />
             </div>
             <div className="absolute -bottom-6 -right-4 sm:right-6 bg-navy text-white rounded-2xl px-6 py-5 shadow-xl">
               <span className="block font-heading font-extrabold text-3xl text-brand leading-none">SAR</span>
