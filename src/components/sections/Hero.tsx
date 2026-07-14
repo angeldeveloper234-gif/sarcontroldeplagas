@@ -132,6 +132,21 @@ export function Hero() {
                 ))}
               </ul>
             </FadeUp>
+
+            {/* Técnico en mobile (bien adaptado, sobre panel verde) */}
+            <FadeUp delay={0.42} className="lg:hidden">
+              <div className="mt-10 relative mx-auto max-w-[16rem] rounded-3xl overflow-hidden" style={{ background: 'linear-gradient(155deg, #6EBF37 0%, #4E9124 100%)' }}>
+                <div className="absolute inset-0 dots-light opacity-25" />
+                <Image
+                  src="/person-fumigation.png"
+                  alt="Técnico certificado de SAR Control de Plagas"
+                  width={481}
+                  height={549}
+                  className="relative w-full h-auto object-contain object-bottom drop-shadow-[0_10px_25px_rgba(10,20,59,0.35)]"
+                  sizes="16rem"
+                />
+              </div>
+            </FadeUp>
           </div>
         </div>
       </div>

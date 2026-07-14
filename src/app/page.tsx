@@ -7,6 +7,7 @@ import { About } from '@/components/sections/About'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import { GoogleReviews } from '@/components/sections/GoogleReviews'
 import { Faq } from '@/components/sections/Faq'
+import { Locations } from '@/components/sections/Locations'
 import { BlogTeaser } from '@/components/sections/BlogTeaser'
 import { CtaBanner } from '@/components/sections/CtaBanner'
 import { Contact } from '@/components/sections/Contact'
@@ -22,6 +23,7 @@ export default function Home() {
       <About />
       <WhyChooseUs />
       <GoogleReviews />
+      <Locations />
       <Faq />
       <BlogTeaser />
       <CtaBanner />
