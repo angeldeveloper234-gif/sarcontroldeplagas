@@ -4,6 +4,7 @@ import { Certifications } from '@/components/sections/Certifications'
 import { Services } from '@/components/sections/Services'
 import { PestGrid } from '@/components/sections/PestGrid'
 import { Process } from '@/components/sections/Process'
+import { ImpactStats } from '@/components/sections/ImpactStats'
 import { About } from '@/components/sections/About'
 import { Guarantee } from '@/components/sections/Guarantee'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
@@ -23,6 +24,7 @@ export default function Home() {
       <Services />
       <PestGrid />
       <Process />
+      <ImpactStats />
       <About />
       <Guarantee />
       <WhyChooseUs />

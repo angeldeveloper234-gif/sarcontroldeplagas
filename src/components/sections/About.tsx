@@ -12,13 +12,6 @@ const REASONS = [
   'Cumplimiento de COFEPRIS, SSA y NOM-256-SSA1-2012.',
 ]
 
-/** Cifras reales del negocio (copy original del sitio). */
-const STATS = [
-  { value: '97%', label: 'Efectividad en control' },
-  { value: '658', label: 'Clientes felices' },
-  { value: '8+', label: 'Especialistas' },
-  { value: '5k+', label: 'Servicios realizados' },
-]
 
 export function About() {
   return (
@@ -75,17 +68,6 @@ export function About() {
                 </li>
               ))}
             </ul>
-          </FadeUp>
-
-          <FadeUp delay={0.24}>
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-border pt-6">
-              {STATS.map((s) => (
-                <div key={s.label}>
-                  <span className="block font-heading font-extrabold text-navy text-[1.4rem] leading-none">{s.value}</span>
-                  <span className="block text-[0.72rem] text-muted-foreground mt-1.5">{s.label}</span>
-                </div>
-              ))}
-            </div>
           </FadeUp>
         </div>
       </div>
