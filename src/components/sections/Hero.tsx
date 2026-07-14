@@ -36,10 +36,10 @@ export function Hero() {
         {/* Técnico (encima de todo, bleed inferior) */}
         <div className="hidden lg:block absolute bottom-0 right-[3%] xl:right-[6%] h-[90%] max-h-[44rem] z-10" aria-hidden>
           <Image
-            src="/person-fumigation.png"
+            src="/fumigador2-transparente.png"
             alt="Técnico certificado de SAR Control de Plagas"
-            width={481}
-            height={549}
+            width={832}
+            height={1289}
             priority
             className="h-full w-auto object-contain object-bottom drop-shadow-[0_18px_35px_rgba(10,20,59,0.5)]"
             sizes="30rem"
@@ -137,7 +137,7 @@ export function Hero() {
                   {/* Glow blanco detrás del técnico */}
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 size-52 rounded-full bg-white/30 blur-2xl" />
                   <Image
-                    src="/person-fumigation.png"
+                    src="/fumigador2-transparente.png"
                     alt="Técnico certificado de SAR Control de Plagas"
                     fill
                     priority
