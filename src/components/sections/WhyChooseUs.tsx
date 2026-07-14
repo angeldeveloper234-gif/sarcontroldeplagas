@@ -69,22 +69,24 @@ export function WhyChooseUs() {
             ))}
           </div>
 
-          {/* Equipo al centro, en marco con acento */}
+          {/* Técnico al centro — recorte transparente sobre halo verde, sin borde */}
           <FadeUp delay={0.1} className="order-1 lg:order-2 justify-self-center">
-            <div className="relative">
-              <div className="absolute -inset-3 rounded-3xl bg-brand/15 blur-xl" />
-              <div className="relative w-[17rem] sm:w-[20rem] aspect-[4/5] rounded-3xl overflow-hidden border-2 border-white/15 shadow-2xl">
+            <div className="relative w-[16rem] sm:w-[19rem]">
+              {/* Halo verde detrás de la figura */}
+              <div className="absolute inset-x-2 bottom-10 top-6 rounded-full bg-brand/25 blur-2xl" />
+              <div className="absolute inset-x-10 bottom-16 top-16 rounded-full bg-brand/30 blur-xl" />
+              {/* Figura recortada (sin borde) */}
+              <div className="relative aspect-[4/5]">
                 <Image
-                  src="/team-sar.png"
-                  alt="Equipo de técnicos certificados de SAR Control de Plagas"
+                  src="/fumigador3-transparent.png"
+                  alt="Técnico certificado de SAR Control de Plagas"
                   fill
-                  className="object-cover object-center"
-                  sizes="20rem"
+                  className="object-contain object-bottom drop-shadow-[0_18px_35px_rgba(0,0,0,0.45)]"
+                  sizes="19rem"
                 />
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(16,30,82,0.55), transparent 45%)' }} />
               </div>
               {/* Badge flotante */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-brand text-white px-5 py-2.5 shadow-xl">
+              <div className="absolute bottom-1 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-brand text-white px-5 py-2.5 shadow-xl">
                 <BadgeCheck className="size-4" />
                 <span className="text-[0.78rem] font-bold uppercase tracking-wide">Equipo certificado</span>
               </div>
