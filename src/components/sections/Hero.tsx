@@ -54,7 +54,7 @@ export function Hero() {
 
         {/* ── Contenido izquierdo ── */}
         <div className="container relative">
-          <div className="max-w-xl lg:max-w-[35rem] py-14 lg:py-16">
+          <div className="max-w-xl lg:max-w-[35rem] pt-14 pb-0 lg:py-16">
             <FadeUp>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/8 border border-white/15 backdrop-blur px-4 py-1.5 text-white/85 text-[0.7rem] font-semibold uppercase tracking-[0.16em]">
                 <span className="size-1.5 rounded-full bg-brand animate-pulse" />
@@ -126,32 +126,25 @@ export function Hero() {
               </p>
             </FadeUp>
 
-            {/* Técnico en mobile (panel con proporción, anclado al fondo) */}
-            <FadeUp delay={0.42} className="lg:hidden">
-              <div className="mt-10 relative mx-auto w-full max-w-[19rem]">
-                <div
-                  className="relative aspect-[4/5] rounded-[1.75rem] overflow-hidden border border-white/15 shadow-2xl"
-                  style={{ background: 'linear-gradient(160deg, #6EBF37 0%, #4E9124 100%)' }}
-                >
-                  <div className="absolute inset-0 dots-light opacity-25" />
-                  {/* Glow blanco detrás del técnico */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 size-52 rounded-full bg-white/30 blur-2xl" />
-                  <Image
-                    src="/fumigador2-transparente.png"
-                    alt="Técnico certificado de SAR Control de Plagas"
-                    fill
-                    priority
-                    className="relative object-contain object-bottom drop-shadow-[0_12px_25px_rgba(10,20,59,0.4)]"
-                    sizes="19rem"
-                  />
-                </div>
-                {/* Pill de certificación flotante */}
-                <div className="absolute -left-2 bottom-6 flex items-center gap-2 rounded-full bg-white pl-1.5 pr-3.5 py-1.5 shadow-xl">
+            {/* Técnico en mobile — recorte a ras del fondo, sin caja ni animación (para que quede flush) */}
+            <div className="lg:hidden">
+              <div className="relative mt-8 mx-auto w-full max-w-[15rem]">
+                <Image
+                  src="/fumigador2-transparente.png"
+                  alt="Técnico certificado de SAR Control de Plagas"
+                  width={832}
+                  height={1289}
+                  priority
+                  className="block w-full h-auto object-bottom drop-shadow-[0_14px_28px_rgba(0,0,0,0.4)]"
+                  sizes="15rem"
+                />
+                {/* Pill de certificación */}
+                <div className="absolute left-0 bottom-10 flex items-center gap-2 rounded-full bg-white pl-1.5 pr-3.5 py-1.5 shadow-xl">
                   <span className="size-6 rounded-full bg-brand flex items-center justify-center"><Check className="size-3.5 text-white" /></span>
                   <span className="text-[0.72rem] font-bold text-navy leading-none">Técnicos<br />certificados</span>
                 </div>
               </div>
-            </FadeUp>
+            </div>
           </div>
         </div>
       </div>
@@ -159,7 +152,7 @@ export function Hero() {
       {/* ── Tarjetas de confianza superpuestas ── */}
       <div className="bg-white">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 relative z-30 -mt-12 pb-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 relative z-30 pt-8 lg:pt-0 lg:-mt-12 pb-4">
             {TRUST.map((c, i) => (
               <FadeUp key={c.title} delay={0.1 + i * 0.08}>
                 <div className="group bg-white border border-border shadow-xl rounded-2xl p-6 flex items-start gap-4 h-full transition-all hover:-translate-y-1 hover:shadow-2xl hover:border-brand/40">
