@@ -12,8 +12,6 @@ const TRUST = [
   { Icon: ShieldCheck, title: 'Personal certificado', desc: 'Técnicos capacitados, COFEPRIS y NOM-256-SSA1-2012.' },
 ]
 
-const PILLS = ['Cotización sin costo', '10% en tu 1er servicio', 'Certificados COFEPRIS']
-
 export function Hero() {
   return (
     <section id="inicio">
@@ -121,16 +119,11 @@ export function Hero() {
               </div>
             </FadeUp>
 
-            {/* Check-pills de oferta */}
+            {/* Nota de oferta (una línea, ligera) */}
             <FadeUp delay={0.36}>
-              <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-2.5">
-                {PILLS.map((p) => (
-                  <li key={p} className="inline-flex items-center gap-2 text-white/80 text-[0.82rem] font-medium">
-                    <span className="size-4 rounded-full bg-brand/25 flex items-center justify-center"><Check className="size-2.5 text-brand" /></span>
-                    {p}
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-6 text-white/55 text-[0.82rem]">
+                Cotización sin costo · <span className="text-brand font-semibold">10% de descuento</span> en tu primer servicio
+              </p>
             </FadeUp>
 
             {/* Técnico en mobile (bien adaptado, sobre panel verde) */}

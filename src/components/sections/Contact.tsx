@@ -54,9 +54,9 @@ export function Contact() {
                 const inner = (
                   <div className="flex items-start gap-3 bg-white/5 border border-white/10 rounded-xl p-4 h-full">
                     <div className="size-10 rounded-lg bg-brand flex items-center justify-center shrink-0"><c.Icon className="size-5 text-white" /></div>
-                    <div>
+                    <div className="min-w-0">
                       <span className="block text-[0.7rem] uppercase tracking-wide text-white/50">{c.label}</span>
-                      <span className="block text-[0.9rem] font-semibold text-white mt-0.5">{c.value}</span>
+                      <span className="block text-[0.86rem] font-semibold text-white mt-0.5 break-words">{c.value}</span>
                     </div>
                   </div>
                 )

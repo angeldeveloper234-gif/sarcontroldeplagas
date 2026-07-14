@@ -1,6 +1,5 @@
 import { Hero } from '@/components/sections/Hero'
 import { PestMarquee } from '@/components/sections/PestMarquee'
-import { Certifications } from '@/components/sections/Certifications'
 import { Services } from '@/components/sections/Services'
 import { PestGrid } from '@/components/sections/PestGrid'
 import { Process } from '@/components/sections/Process'
@@ -20,7 +19,6 @@ export default function Home() {
     <>
       <Hero />
       <PestMarquee />
-      <Certifications />
       <Services />
       <PestGrid />
       <Process />
