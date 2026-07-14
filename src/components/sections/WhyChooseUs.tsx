@@ -75,18 +75,18 @@ export function WhyChooseUs() {
               {/* Halo verde detrás de la figura */}
               <div className="absolute inset-x-2 bottom-10 top-6 rounded-full bg-brand/25 blur-2xl" />
               <div className="absolute inset-x-12 bottom-16 top-16 rounded-full bg-brand/30 blur-xl" />
-              {/* Figura recortada (sin borde), más grande */}
+              {/* Figura más grande; el borde inferior se desvanece para ocultar el recorte */}
               <div className="relative aspect-[4/5]">
                 <Image
                   src="/fumigador3-transparent.png"
                   alt="Técnico certificado de SAR Control de Plagas"
                   fill
-                  className="object-contain object-bottom drop-shadow-[0_18px_35px_rgba(0,0,0,0.45)]"
+                  className="object-contain object-bottom [mask-image:linear-gradient(to_bottom,#000_68%,transparent_92%)] [-webkit-mask-image:linear-gradient(to_bottom,#000_68%,transparent_92%)]"
                   sizes="24rem"
                 />
               </div>
-              {/* Badge — tapa la parte baja del torso */}
-              <div className="absolute z-10 bottom-[15%] left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 shadow-xl shadow-black/25">
+              {/* Badge sobre la zona baja (donde la figura se desvanece) */}
+              <div className="absolute z-10 bottom-[14%] left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 shadow-xl shadow-black/30">
                 <BadgeCheck className="size-4" />
                 <span className="text-[0.8rem] font-bold uppercase tracking-wide whitespace-nowrap">Equipo certificado</span>
               </div>
