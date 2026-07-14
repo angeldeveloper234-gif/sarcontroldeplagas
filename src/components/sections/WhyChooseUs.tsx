@@ -69,18 +69,25 @@ export function WhyChooseUs() {
             ))}
           </div>
 
-          {/* Técnico al centro con anillo */}
+          {/* Equipo al centro, en marco con acento */}
           <FadeUp delay={0.1} className="order-1 lg:order-2 justify-self-center">
-            <div className="relative w-[15rem] sm:w-[17rem]">
-              <div className="absolute inset-x-4 bottom-0 top-10 rounded-t-full bg-gradient-to-b from-brand/25 to-transparent border border-white/10" />
-              <Image
-                src="/person-fumigation.png"
-                alt="Técnico certificado de SAR Control de Plagas"
-                width={481}
-                height={549}
-                className="relative w-full h-auto drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
-                sizes="17rem"
-              />
+            <div className="relative">
+              <div className="absolute -inset-3 rounded-3xl bg-brand/15 blur-xl" />
+              <div className="relative w-[17rem] sm:w-[20rem] aspect-[4/5] rounded-3xl overflow-hidden border-2 border-white/15 shadow-2xl">
+                <Image
+                  src="/team-sar.png"
+                  alt="Equipo de técnicos certificados de SAR Control de Plagas"
+                  fill
+                  className="object-cover object-center"
+                  sizes="20rem"
+                />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(16,30,82,0.55), transparent 45%)' }} />
+              </div>
+              {/* Badge flotante */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-brand text-white px-5 py-2.5 shadow-xl">
+                <BadgeCheck className="size-4" />
+                <span className="text-[0.78rem] font-bold uppercase tracking-wide">Equipo certificado</span>
+              </div>
             </div>
           </FadeUp>
 
