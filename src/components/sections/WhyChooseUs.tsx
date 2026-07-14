@@ -71,24 +71,24 @@ export function WhyChooseUs() {
 
           {/* Técnico al centro — recorte transparente sobre halo verde, sin borde */}
           <FadeUp delay={0.1} className="order-1 lg:order-2 justify-self-center">
-            <div className="relative w-[16rem] sm:w-[19rem]">
+            <div className="relative w-[20rem] sm:w-[24rem]">
               {/* Halo verde detrás de la figura */}
               <div className="absolute inset-x-2 bottom-10 top-6 rounded-full bg-brand/25 blur-2xl" />
-              <div className="absolute inset-x-10 bottom-16 top-16 rounded-full bg-brand/30 blur-xl" />
-              {/* Figura recortada (sin borde) */}
+              <div className="absolute inset-x-12 bottom-16 top-16 rounded-full bg-brand/30 blur-xl" />
+              {/* Figura recortada (sin borde), más grande */}
               <div className="relative aspect-[4/5]">
                 <Image
                   src="/fumigador3-transparent.png"
                   alt="Técnico certificado de SAR Control de Plagas"
                   fill
                   className="object-contain object-bottom drop-shadow-[0_18px_35px_rgba(0,0,0,0.45)]"
-                  sizes="19rem"
+                  sizes="24rem"
                 />
               </div>
-              {/* Badge flotante */}
-              <div className="absolute bottom-1 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-brand text-white px-5 py-2.5 shadow-xl">
+              {/* Badge — tapa la parte baja del torso */}
+              <div className="absolute z-10 bottom-[15%] left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-brand text-white px-6 py-3 shadow-xl shadow-black/25">
                 <BadgeCheck className="size-4" />
-                <span className="text-[0.78rem] font-bold uppercase tracking-wide">Equipo certificado</span>
+                <span className="text-[0.8rem] font-bold uppercase tracking-wide whitespace-nowrap">Equipo certificado</span>
               </div>
             </div>
           </FadeUp>
