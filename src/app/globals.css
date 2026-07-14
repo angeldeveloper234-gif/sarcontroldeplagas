@@ -200,3 +200,13 @@
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee { animation: none; flex-wrap: wrap; justify-content: center; width: auto; }
 }
+
+/* ── Estética de esquinas diagonales (estilo SAR / NYE) ─────────────
+   Todo el sitio usa border-radius SOLO en esquina superior-izquierda y
+   inferior-derecha; las otras dos esquinas quedan en 0px. */
+*,
+*::before,
+*::after {
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
