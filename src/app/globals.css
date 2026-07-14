@@ -202,11 +202,11 @@
 }
 
 /* ── Estética de esquinas diagonales (estilo SAR / NYE) ─────────────
-   Todo el sitio usa border-radius SOLO en esquina superior-izquierda y
-   inferior-derecha; las otras dos esquinas quedan en 0px. */
-*,
-*::before,
-*::after {
+   SOLO en contenedores/paneles grandes (imágenes y tarjetas rounded-3xl):
+   redondea únicamente la esquina superior-izquierda e inferior-derecha.
+   Botones, pills, círculos, chips de iconos, checks, pasos, reseñas y el
+   FAB de WhatsApp NO se ven afectados (mantienen su forma). */
+.rounded-3xl {
   border-top-right-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
