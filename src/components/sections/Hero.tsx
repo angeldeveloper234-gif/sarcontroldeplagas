@@ -126,18 +126,30 @@ export function Hero() {
               </p>
             </FadeUp>
 
-            {/* Técnico en mobile (bien adaptado, sobre panel verde) */}
+            {/* Técnico en mobile (panel con proporción, anclado al fondo) */}
             <FadeUp delay={0.42} className="lg:hidden">
-              <div className="mt-10 relative mx-auto max-w-[16rem] rounded-3xl overflow-hidden" style={{ background: 'linear-gradient(155deg, #6EBF37 0%, #4E9124 100%)' }}>
-                <div className="absolute inset-0 dots-light opacity-25" />
-                <Image
-                  src="/person-fumigation.png"
-                  alt="Técnico certificado de SAR Control de Plagas"
-                  width={481}
-                  height={549}
-                  className="relative w-full h-auto object-contain object-bottom drop-shadow-[0_10px_25px_rgba(10,20,59,0.35)]"
-                  sizes="16rem"
-                />
+              <div className="mt-10 relative mx-auto w-full max-w-[19rem]">
+                <div
+                  className="relative aspect-[4/5] rounded-[1.75rem] overflow-hidden border border-white/15 shadow-2xl"
+                  style={{ background: 'linear-gradient(160deg, #6EBF37 0%, #4E9124 100%)' }}
+                >
+                  <div className="absolute inset-0 dots-light opacity-25" />
+                  {/* Glow blanco detrás del técnico */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 size-52 rounded-full bg-white/30 blur-2xl" />
+                  <Image
+                    src="/person-fumigation.png"
+                    alt="Técnico certificado de SAR Control de Plagas"
+                    fill
+                    priority
+                    className="relative object-contain object-bottom drop-shadow-[0_12px_25px_rgba(10,20,59,0.4)]"
+                    sizes="19rem"
+                  />
+                </div>
+                {/* Pill de certificación flotante */}
+                <div className="absolute -left-2 bottom-6 flex items-center gap-2 rounded-full bg-white pl-1.5 pr-3.5 py-1.5 shadow-xl">
+                  <span className="size-6 rounded-full bg-brand flex items-center justify-center"><Check className="size-3.5 text-white" /></span>
+                  <span className="text-[0.72rem] font-bold text-navy leading-none">Técnicos<br />certificados</span>
+                </div>
               </div>
             </FadeUp>
           </div>
