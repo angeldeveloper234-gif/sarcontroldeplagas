@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: TITLE,
     description: SITE.description,
-    images: [{ url: SITE.ogImage, width: 1200, height: 630, alt: SITE.name }],
+    images: [{ url: SITE.ogImage, width: 1200, height: 630, type: 'image/jpeg', alt: `${SITE.name} — Control de plagas en Querétaro` }],
   },
   twitter: {
     card: "summary_large_image",
